@@ -7,14 +7,14 @@ browser.config.hold_browser_open = True
 
 @pytest.fixture(scope='function')
 def desktop_fixture():
-    browser.config.window_height = 1980
-    browser.config.window_width = 1024
+    browser.config.window_height = 1024
+    browser.config.window_width = 1980
 
 
 @pytest.fixture(scope='function')
 def mobile_fixture():
-    browser.config.window_height = 900
-    browser.config.window_width = 600
+    browser.config.window_height = 600
+    browser.config.window_width = 900
 
 
 def test_github_desktop(desktop_fixture):

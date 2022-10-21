@@ -4,12 +4,12 @@ from selene.support.shared.jquery_style import s
 
 
 @pytest.mark.parametrize(['browser_height', 'browser_width'],
-                         [(900, 600), (1980, 1024)],
-                         ids=['Desktop', 'Mob'])
+                         [(600, 900), (1024, 1400)],
+                         ids=['Mob', 'Desktop'])
 def test_skip_mob_version(browser_height, browser_width):
     browser.config.window_height = browser_height
     browser.config.window_width = browser_width
-    if browser_height == 900 and browser_width == 600:
+    if browser_height == 600 and browser_width == 900:
         pytest.skip('Тест для мобильной версии')
     else:
         browser.open('/')
@@ -17,12 +17,12 @@ def test_skip_mob_version(browser_height, browser_width):
 
 
 @pytest.mark.parametrize(['browser_height', 'browser_width'],
-                         [(900, 600), (1980, 1024)],
-                         ids=['Desktop', 'Mob'])
+                         [(600, 900), (1024, 1400)],
+                         ids=['Mob', 'Desktop'])
 def test_skip_desktop_version(browser_height, browser_width):
     browser.config.window_height = browser_height
     browser.config.window_width = browser_width
-    if browser_height == 1980 and browser_width == 1024:
+    if browser_height == 1024 and browser_width == 1400:
         pytest.skip('Тест для десктопной версии')
     else:
         browser.open('/')
