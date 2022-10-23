@@ -15,6 +15,3 @@ def test_with_params(browser_config):
     if browser.config.window_width == 900 and browser.config.window_height == 600:
         s('.Button-label').click()
     s('.HeaderMenu-link--sign-in').click()
-
-    """if browser.config.window_width == 1980 and browser.config.window_height == 1024:
-        s('.HeaderMenu-link--sign-in').click()"""
