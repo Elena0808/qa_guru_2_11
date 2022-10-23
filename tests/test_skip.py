@@ -4,7 +4,7 @@ from selene.support.shared.jquery_style import s
 
 
 @pytest.mark.parametrize(['browser_height', 'browser_width'],
-                         [(600, 900), (1024, 1400)],
+                         [(600, 900), (1024, 1980)],
                          ids=['Mob', 'Desktop'])
 def test_skip_mob_version(browser_height, browser_width):
     browser.config.window_height = browser_height
@@ -17,7 +17,7 @@ def test_skip_mob_version(browser_height, browser_width):
 
 
 @pytest.mark.parametrize(['browser_height', 'browser_width'],
-                         [(600, 900), (1024, 1400)],
+                         [(600, 900), (1024, 1980)],
                          ids=['Mob', 'Desktop'])
 def test_skip_desktop_version(browser_height, browser_width):
     browser.config.window_height = browser_height
